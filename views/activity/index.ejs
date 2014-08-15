@@ -1,9 +1,11 @@
-<p>Here are a few treasures</p>
+<p>Here are a few activities</p>
 
-<p>Total count: <%= treasures.length %></p>
+<p>Total count: <%= activities.length %></p>
 
 <ul>
-<% for (var i = 0; i < treasures.length; i++) { %>
-     <li><%= treasures[i].name %> (<%= treasures[i].color %>)</li>
+<% for (var i = 0; i < activities.length; i++) { %>
+  <li>
+    <%= activities[i].name %> (worth <%= activities[i].points %> points)
+  </li>
 <% } %>
 </ul>
