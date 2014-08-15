@@ -37,6 +37,7 @@ module.exports.bootstrap = function(cb) {
           console.log('activity created', activity);
         }
     });
+  });
 
   cb();
 };
