@@ -1,0 +1,9 @@
+<p>Here are a few treasures</p>
+
+<p>Total count: <%= treasures.length %></p>
+
+<ul>
+<% for (var i = 0; i < treasures.length; i++) { %>
+     <li><%= treasures[i].name %> (<%= treasures[i].color %>)</li>
+<% } %>
+</ul>
