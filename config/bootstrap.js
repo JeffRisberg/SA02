@@ -14,7 +14,7 @@ module.exports.bootstrap = function(cb) {
   // It's very important to trigger this callback method when you are finished
   // with the bootstrap!  (otherwise your server will never lift, since it's waiting on the bootstrap)
   Activity.destroy({}, function confirm(err,x) {
-    Activity.create({id: 1, name: "Hiking", points: 5}, 
+    Activity.create({name: "Hiking", type: "Physical", points: 5}, 
       function confirm(err, activity) {
         console.log(err);
         if (err) {
@@ -22,11 +22,11 @@ module.exports.bootstrap = function(cb) {
           return;
         }
         else {
-          console.log('activity created', activity);
+          console.log('created: ', activity);
         }
     });
 
-    Activity.create({id: 2, name: "Walking", points: 1},
+    Activity.create({name: "Walking", type: "Physical", points: 1},
       function confirm(err, activity) {
         console.log(err);
         if (err) {
@@ -34,7 +34,7 @@ module.exports.bootstrap = function(cb) {
           return;
         }
         else {
-          console.log('activity created', activity);
+          console.log('created: ', activity);
         }
     });
   });

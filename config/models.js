@@ -19,6 +19,6 @@ module.exports.models = {
   ***************************************************************************/
 
 
-  // connection: 'localDiskDb'
+  connection: 'postgres1',
   migrate: 'alter'
 };

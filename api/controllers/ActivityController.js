@@ -11,5 +11,25 @@ module.exports = {
 
             res.view(data);
         });
-    }
+    },
+
+    find: function (req, res) {
+        var id = req.param("id");
+
+        Activity.findOne(id, function(err, activity) {
+            var data = {activity: activity};
+
+            if (activity === undefined) return res.notFound();
+            res.view(data);
+
+        });
+    },
+
+    create: function (req, res) {
+        Activity.create({name: "Generic", type: "Physical", points: 5}, 
+          function(err, activity) {
+            var data = {activity: activity};
+            res.view(data);
+        });
+    }     
 };

@@ -1,11 +1,14 @@
-<p>Here are a few activities</p>
+<h2>Activities List</p>
 
-<p>Total count: <%= activities.length %></p>
-
-<ul>
+<table class="table">
 <% for (var i = 0; i < activities.length; i++) { %>
-  <li>
-    <%= activities[i].name %> (worth <%= activities[i].points %> points)
-  </li>
+  <tr>
+    <td><%= activities[i].type %></td>
+    <td><%= activities[i].name %></td>
+    <td><%= activities[i].points %></td>
+    <td><%= link_to("Show", 'activities/'+activities[i].id) %></td>
+  </tr>
 <% } %>
-</ul>
+</table>
+
+<%= link_to("Add Another", 'activities/add') %>
