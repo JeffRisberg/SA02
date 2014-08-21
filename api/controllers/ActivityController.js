@@ -26,11 +26,10 @@ module.exports = {
     },
 
     create: function (req, res) {
-        Activity.create({name: "Generic", type: "Physical", points: 5}, 
+        Activity.create({name: "Dog Walking", type: "Physical", points: 5}, 
           function(err, activity) {
-            var data = { activity: activity };
 
-            res.view(data);
+            res.redirect("/activity");
         });
     }     
 };
