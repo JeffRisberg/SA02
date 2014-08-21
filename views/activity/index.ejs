@@ -6,9 +6,9 @@
     <td><%= activities[i].type %></td>
     <td><%= activities[i].name %></td>
     <td><%= activities[i].points %></td>
-    <td><% link_to("Show", 'activities/'+activities[i].id) %></td>
+    <td><%- link_to("View", 'activity/'+activities[i].id) %></td>
   </tr>
 <% } %>
 </table>
 
-<% link_to("Add Another", 'activities/add') %>
+<%- link_to("Add Another", 'activity/create') %>
