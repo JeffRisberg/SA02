@@ -28,7 +28,8 @@ module.exports.connections = {
     //password: process.env.PG_PASSWORD || '',
     //database: process.env.PG_DATABASE || 'SA02',
     //port:     process.env.PG_PORT     || 5532,
-    url:      process.env.PG_URL || '',
+    url:      process.env.DATABASE_URL || '',
+    pool: false,
     ssl: true
   }
 
