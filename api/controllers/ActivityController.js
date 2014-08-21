@@ -13,8 +13,8 @@ module.exports = {
         });
     },
 
-    find: function (req, res) {
-        var id = req.param("id");
+    view: function (req, res) {
+        var id = req.param("id", null);
 
         Activity.findOne(id, function(err, activity) {
             var data = {activity: activity};
