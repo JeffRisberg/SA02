@@ -1,6 +1,12 @@
-<h2>Activities List</p>
+<h2>Activities List</h2>
 
-<table class="table">
+<table class="table" style="width: 600px">
+  <tr>
+    <th>Type</th>
+    <th>Name</th>
+    <th>Points</th>
+    <th>&nbsp;</th>
+  </tr>
 <% for (var i = 0; i < activities.length; i++) { %>
   <tr>
     <td><%= activities[i].type %></td>
