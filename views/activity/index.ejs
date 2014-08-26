@@ -1,20 +1,25 @@
 <h2>Activities List</h2>
 
+<%- link_to("Create New", '/activity/create', {class: 'btn btn-default'}) %>
+
 <table class="table" style="width: 600px">
   <tr>
-    <th>Type</th>
     <th>Name</th>
+    <th>Type</th>
     <th>Points</th>
     <th>&nbsp;</th>
   </tr>
 <% for (var i = 0; i < activities.length; i++) { %>
   <tr>
+    <td>
+      <%- link_to(activities[i].name, '/activity/view/'+activities[i].id) %>
+    </td>
     <td><%= activities[i].type %></td>
-    <td><%= activities[i].name %></td>
     <td><%= activities[i].points %></td>
-    <td><%- link_to("View", '/activity/view/'+activities[i].id) %></td>
+    <td>
+      <%- link_to("Edit", '/activity/update/'+activities[i].id) %>
+      <%- link_to("Delete", '/activity/delete/'+activities[i].id) %>
+    </td>
   </tr>
 <% } %>
 </table>
-
-<%- link_to("Add Another", '/activity/create', {class: "btn btn-default"}) %>
