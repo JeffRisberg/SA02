@@ -2,7 +2,7 @@ module.exports = {
     index: function (req, res) {      
       Activity.find({}).exec(function(err, activities) {
         if (err) {
-          sails.log.err("-----------err", err);
+          sails.log.error("-----------err", err);
           res.send(400);
           return;
         }
